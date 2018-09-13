@@ -1,29 +1,53 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+// stylelint-disable
+/* prettier-ignore */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, lengend, button, input, textarea,
+th, td,
+div, span {
+    // 清除内外边距和设置盒模型
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* prettier-ignore */
+fieldset, lengend, button, input, textarea, a {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* prettier-ignore */
+body,
+button, input, select, textarea {
+    // 这里默认字体需要定义在 _variable.scss
+    // font-family: $font-family;
+}
+
+a {
+    color: inherit;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
