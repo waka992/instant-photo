@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
 <style lang="scss">
@@ -33,18 +33,21 @@ button, input, select, textarea {
 }
 
 a {
-    color: inherit;
-    box-sizing: border-box;
-    text-decoration: none;
-    cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  // mobile
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
