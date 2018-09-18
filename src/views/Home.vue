@@ -13,12 +13,12 @@
     <!-- <mt-search v-model="search"></mt-search> -->
     <div class="content">
       <ul class="list">
-        <li v-for="(lib, index) in liarray" :key="index">
+        <router-link :to="{ name: 'show', params: { id: index }}" tag="li" v-for="(lib, index) in liarray" :key="index">
           <div class="container">
             <img src="~assets/logo.png" alt="">
             <p>2018-09-14</p>
           </div>
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>
@@ -99,10 +99,6 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 .home {
-  // header
-  .header {
-    height: 40px;
-  }
 
   // content list
   .list {
@@ -111,8 +107,8 @@ export default class Home extends Vue {
     & > li {
       float: left;
       width: 50%;
-      height: 200px;
       cursor: pointer;
+      margin-bottom: 20px;
 
       .container {
         img {

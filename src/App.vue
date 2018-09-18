@@ -52,5 +52,22 @@ ul {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
+
+  .header {
+    height: 40px;
+  }
+
+  .clearfix {
+    zoom: 1;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      visibility: hidden;
+      height: 0;
+    }
+  }
 }
 </style>
