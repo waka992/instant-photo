@@ -83,8 +83,10 @@ export default class Show extends Vue {
   protected mounted() {
     this.getData();
     this.$nextTick(() => {
-      const swiperTop = this.$refs.swiperTop.swiper;
-      const swiperThumbs = this.$refs.swiperThumbs.swiper;
+      let swiperTopElement = this.$refs.swiperTop as any
+      let swiperThumbsElement = this.$refs.swiperThumbs as any
+      const swiperTop = swiperTopElement.swiper;
+      const swiperThumbs = swiperThumbsElement.swiper;
       swiperTop.controller.control = swiperThumbs;
       swiperThumbs.controller.control = swiperTop;
     });
